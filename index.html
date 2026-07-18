@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shwetansh Sahu — Video Editor</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700;900&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== PARTICLES ========== -->
+  <div class="particles-bg" aria-hidden="true">
+    <div class="particle" style="--x:10%;--y:20%;--d:8s;--s:3px;--o:0.5"></div>
+    <div class="particle" style="--x:25%;--y:60%;--d:12s;--s:2px;--o:0.3"></div>
+    <div class="particle" style="--x:45%;--y:15%;--d:9s;--s:4px;--o:0.4"></div>
+    <div class="particle" style="--x:60%;--y:75%;--d:15s;--s:2px;--o:0.6"></div>
+    <div class="particle" style="--x:75%;--y:35%;--d:11s;--s:3px;--o:0.3"></div>
+    <div class="particle" style="--x:85%;--y:55%;--d:7s;--s:5px;--o:0.4"></div>
+    <div class="particle" style="--x:20%;--y:85%;--d:13s;--s:2px;--o:0.5"></div>
+    <div class="particle" style="--x:55%;--y:45%;--d:10s;--s:3px;--o:0.3"></div>
+    <div class="particle" style="--x:90%;--y:10%;--d:14s;--s:2px;--o:0.4"></div>
+    <div class="particle" style="--x:35%;--y:90%;--d:8s;--s:4px;--o:0.5"></div>
+    <div class="particle" style="--x:70%;--y:20%;--d:16s;--s:2px;--o:0.3"></div>
+    <div class="particle" style="--x:5%;--y:50%;--d:11s;--s:3px;--o:0.4"></div>
+    <div class="particle" style="--x:50%;--y:70%;--d:9s;--s:2px;--o:0.6"></div>
+    <div class="particle" style="--x:80%;--y:80%;--d:12s;--s:4px;--o:0.3"></div>
+    <div class="particle" style="--x:15%;--y:40%;--d:7s;--s:2px;--o:0.5"></div>
+    <div class="particle" style="--x:40%;--y:30%;--d:14s;--s:3px;--o:0.4"></div>
+    <div class="particle" style="--x:65%;--y:65%;--d:10s;--s:2px;--o:0.3"></div>
+    <div class="particle" style="--x:95%;--y:45%;--d:8s;--s:5px;--o:0.4"></div>
+    <div class="particle" style="--x:30%;--y:10%;--d:13s;--s:2px;--o:0.5"></div>
+    <div class="particle" style="--x:55%;--y:95%;--d:11s;--s:3px;--o:0.3"></div>
+  </div>
+
+  <!-- ========== RADIAL GLOWS ========== -->
+  <div class="glow-orb glow-orb--1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--2" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--3" aria-hidden="true"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-glass" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand nav-logo" href="#">SHWETANSH</a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
+        </ul>
+        <a href="mailto:shwetansh099@gmail.com" class="btn btn-neon-outline ms-lg-3">Let's Talk</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-100 hero-row">
+
+        <!-- LEFT SIDE -->
+        <div class="col-lg-6 hero-left fade-in-left">
+          <p class="hero-eyebrow">HI, I'M</p>
+          <h1 class="hero-name">SHWETANSH</h1>
+          <h1 class="hero-title">VIDEO <span class="gradient-text">EDITOR</span></h1>
+          <div class="hero-divider"></div>
+          <p class="hero-desc">
+            I transform raw footage into cinematic stories that connect, inspire, and engage audiences. Every frame is crafted with intention and precision.
+          </p>
+
+          <div class="hero-stats d-flex gap-4 mb-4">
+            <div class="stat-item">
+              <span class="stat-num gradient-text">4+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num gradient-text">50+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num gradient-text">30+</span>
+              <span class="stat-label">Clients</span>
+            </div>
+          </div>
+
+          <div class="hero-btns d-flex flex-wrap gap-3 mb-4">
+            <a href="#work" class="btn btn-neon-solid">
+              <i class="bi bi-play-fill me-2"></i>View My Work
+            </a>
+            <a href="#contact" class="btn btn-glass-outline">
+              <i class="bi bi-envelope me-2"></i>Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials d-flex align-items-center gap-3 mt-2">
+            <span class="social-label">Follow</span>
+            <div class="social-line"></div>
+            <a href="https://www.instagram.com/shwetansh_09?igsh=MXg0OXJtYWMyemtsbw==" target="_blank" class="social-icon-btn" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC_OkNKa2-ZoWXxMD6gGaq4A" target="_blank" class="social-icon-btn" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="mailto:shwetansh099@gmail.com" class="social-icon-btn" aria-label="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="tel:+917754835448" class="social-icon-btn" aria-label="Phone">
+              <i class="bi bi-telephone-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE — Cinema Card -->
+        <div class="col-lg-6 hero-right fade-in-right">
+          <div class="cinema-card">
+            <div class="cinema-card__inner">
+              <!-- Top badge -->
+              <div class="cinema-badge">
+                <span class="badge-dot"></span> LIVE REEL 2024
+              </div>
+              <!-- YouTube Facade Player -->
+              <div class="cinema-embed-wrap" id="yt-facade">
+                <button class="yt-thumb-player" aria-label="Play video" onclick="loadYT()">
+                  <img src="https://img.youtube.com/vi/cSSUKJ4ySvc/maxresdefault.jpg" alt="Reel 2024 thumbnail" loading="lazy" />
+                  <span class="yt-play-btn">
+                    <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C56 0 34 0 34 0S12 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 12.2 0 24 0 24s0 11.8 1.5 16.3a8.5 8.5 0 0 0 6 6C12 48 34 48 34 48s22 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 35.8 68 24 68 24S68 12.2 66.5 7.7z" fill="#ff0000"/>
+                      <path d="M27 34l18-10-18-10v20z" fill="#fff"/>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <script>
+                function loadYT() {
+                  var wrap = document.getElementById('yt-facade');
+                  var iframe = document.createElement('iframe');
+                  iframe.width = '560';
+                  iframe.height = '315';
+                  iframe.src = 'https://www.youtube-nocookie.com/embed/cSSUKJ4ySvc?rel=0&autoplay=1';
+                  iframe.title = 'YouTube video player';
+                  iframe.frameBorder = '0';
+                  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+                  iframe.allowFullscreen = true;
+                  wrap.innerHTML = '';
+                  wrap.appendChild(iframe);
+                }
+              </script>
+            </div>
+          </div>
+
+          <!-- Floating tags -->
+          <div class="float-tag float-tag--1">
+            <i class="bi bi-camera-video me-1"></i> Color Grading
+          </div>
+          <div class="float-tag float-tag--2">
+            <i class="bi bi-music-note-beamed me-1"></i> Sound Design
+          </div>
+          <div class="float-tag float-tag--3">
+            <i class="bi bi-stars me-1"></i> 4K Ready
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT / SKILLS / SERVICES ========== -->
+  <section class="section-gap" id="about">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">DISCOVER</p>
+        <h2 class="section-title">Who I Am &amp; What I Do</h2>
+        <div class="section-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4" id="services">
+        <!-- CARD 1: ABOUT ME -->
+        <div class="col-lg-4 col-md-6 fade-in-up">
+          <div class="glass-card h-100">
+            <div class="glass-card__glow"></div>
+            <div class="card-icon-badge mb-3">
+              <i class="bi bi-person-bounding-box"></i>
+            </div>
+            <h3 class="card-heading mb-3">About Me</h3>
+            <div class="about-avatar-wrap mb-3">
+              <div class="about-avatar">
+                <div class="avatar-placeholder">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring avatar-ring--2"></div>
+              </div>
+            </div>
+            <p class="card-text">
+              With <strong class="text-purple">4+ years</strong> of professional video editing experience, I specialize in cinematic storytelling. From <em>YouTube edits</em> to <em>brand commercials</em>, <em>reels</em>, and <em>documentaries</em> — I bring every frame to life.
+            </p>
+            <p class="card-text mt-2">
+              Currently pursuing <strong class="text-purple">B.Sc Animation</strong> at AAFT Noida, blending academic mastery with real-world creative execution.
+            </p>
+            <a href="mailto:shwetansh099@gmail.com" class="card-link mt-3 d-inline-block">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <!-- CARD 2: SKILLS -->
+        <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay:.15s">
+          <div class="glass-card h-100">
+            <div class="glass-card__glow"></div>
+            <div class="card-icon-badge mb-3">
+              <i class="bi bi-sliders2"></i>
+            </div>
+            <h3 class="card-heading mb-4">Skills</h3>
+
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name">Adobe Premiere Pro</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="progress skill-bar">
+                <div class="progress-bar neon-bar" style="width:90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name">After Effects</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="progress skill-bar">
+                <div class="progress-bar neon-bar" style="width:85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name">DaVinci Resolve</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="progress skill-bar">
+                <div class="progress-bar neon-bar" style="width:80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name">Color Grading</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="progress skill-bar">
+                <div class="progress-bar neon-bar" style="width:85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name">Sound Design</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="progress skill-bar">
+                <div class="progress-bar neon-bar" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: SERVICES -->
+        <div class="col-lg-4 col-md-12 fade-in-up" style="animation-delay:.3s">
+          <div class="glass-card h-100">
+            <div class="glass-card__glow"></div>
+            <div class="card-icon-badge mb-3">
+              <i class="bi bi-stars"></i>
+            </div>
+            <h3 class="card-heading mb-4">Services</h3>
+
+            <div class="service-item">
+              <span class="service-icon"><i class="bi bi-camera-video-fill"></i></span>
+              <div class="service-info">
+                <span class="service-name">Video Editing</span>
+                <span class="service-desc">Narrative-driven cuts &amp; pacing</span>
+              </div>
+              <i class="bi bi-arrow-right-circle service-arrow"></i>
+            </div>
+
+            <div class="service-item">
+              <span class="service-icon"><i class="bi bi-palette-fill"></i></span>
+              <div class="service-info">
+                <span class="service-name">Color Grading</span>
+                <span class="service-desc">Cinematic tones &amp; LUTs</span>
+              </div>
+              <i class="bi bi-arrow-right-circle service-arrow"></i>
+            </div>
+
+            <div class="service-item">
+              <span class="service-icon"><i class="bi bi-music-note-beamed"></i></span>
+              <div class="service-info">
+                <span class="service-name">Sound Design</span>
+                <span class="service-desc">Immersive audio experience</span>
+              </div>
+              <i class="bi bi-arrow-right-circle service-arrow"></i>
+            </div>
+
+            <div class="service-item">
+              <span class="service-icon"><i class="bi bi-magic"></i></span>
+              <div class="service-info">
+                <span class="service-name">Motion Graphics</span>
+                <span class="service-desc">Animated titles &amp; VFX</span>
+              </div>
+              <i class="bi bi-arrow-right-circle service-arrow"></i>
+            </div>
+
+            <div class="service-item border-0">
+              <span class="service-icon"><i class="bi bi-youtube"></i></span>
+              <div class="service-info">
+                <span class="service-name">YouTube / Social Edits</span>
+                <span class="service-desc">Viral-ready content creation</span>
+              </div>
+              <i class="bi bi-arrow-right-circle service-arrow"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED WORK ========== -->
+  <section class="section-gap" id="work">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">PORTFOLIO</p>
+        <h2 class="section-title">Featured Work</h2>
+        <div class="section-underline mx-auto"></div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="work-tabs-wrap mb-5">
+        <ul class="nav work-nav-tabs" id="portfolioTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="work-tab-btn active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="work-tab-btn" id="doc-tab" data-bs-toggle="tab" data-bs-target="#documentary" type="button" role="tab">Documentary</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="work-tab-btn" id="com-tab" data-bs-toggle="tab" data-bs-target="#commercial" type="button" role="tab">Commercial</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="work-tab-btn" id="yt-tab" data-bs-toggle="tab" data-bs-target="#youtube" type="button" role="tab">YouTube</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="work-tab-btn" id="mv-tab" data-bs-toggle="tab" data-bs-target="#musicvideo" type="button" role="tab">Music Video</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="work-tab-btn" id="shorts-tab" data-bs-toggle="tab" data-bs-target="#shorts" type="button" role="tab">Shorts</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="portfolioContent">
+
+        <!-- ALL -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel">
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6 fade-in-up">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/C85H7txXaI0/maxresdefault.jpg" alt="Myntra Motion Adv thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/C85H7txXaI0/hqdefault.jpg';" />
+                  <div class="pcard-category">Documentary</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'C85H7txXaI0')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">01</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Myntra Motion Adv</h4>
+                  <p class="pcard-desc">Urban documentary exploring the raw pulse of midnight streets.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-camera2"></i> Premiere Pro</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay:.1s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/Cyjruwy4lmQ/maxresdefault.jpg" alt="Blinkit Adv thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/Cyjruwy4lmQ/hqdefault.jpg';" />
+                  <div class="pcard-category">Commercial</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'Cyjruwy4lmQ')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">02</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Blinkit Adv</h4>
+                  <p class="pcard-desc">Luxury fashion commercial with cinematic slow-motion sequences.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-palette2"></i> DaVinci</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay:.2s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#240046,#7b2d8b,#c77dff)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/9qFNoDtDlac/maxresdefault.jpg" alt="Starbucks Adv thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/9qFNoDtDlac/hqdefault.jpg';" />
+                  <div class="pcard-category">Music Video</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'9qFNoDtDlac')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">03</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Starbucks Adv</h4>
+                  <p class="pcard-desc">High-energy music video with glitch effects and light leaks.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-music-note"></i> After Effects</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay:.05s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#03071e,#370617,#6a040f)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/1rHWdZqCSwU/maxresdefault.jpg" alt="Real Estate Promo thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/1rHWdZqCSwU/hqdefault.jpg';" />
+                  <div class="pcard-category">YouTube</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'1rHWdZqCSwU')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">04</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Real Estate Promo</h4>
+                  <p class="pcard-desc">Viral travel vlog series with immersive editing and transitions.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> YouTube</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 1 -->
+            <div class="col-lg-3 col-md-4 col-6 fade-in-up" style="animation-delay:.1s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/q7KE-Gh3aFM/hqdefault.jpg" alt="Teleport Vfx thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'q7KE-Gh3aFM')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">05</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Teleport Vfx</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 2 -->
+            <div class="col-lg-3 col-md-4 col-6 fade-in-up" style="animation-delay:.15s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/IAIFpcRW7ss/hqdefault.jpg" alt="Holographic Watch Concept thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'IAIFpcRW7ss')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">06</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Holographic Watch Concept</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 3 -->
+            <div class="col-lg-3 col-md-4 col-6 fade-in-up" style="animation-delay:.2s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#240046,#7b2d8b,#c77dff)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/CWpHY_cZOnw/hqdefault.jpg" alt="Zomato Adv thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'CWpHY_cZOnw')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">07</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Zomato Adv</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 4 -->
+            <div class="col-lg-3 col-md-4 col-6 fade-in-up" style="animation-delay:.25s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#03071e,#370617,#6a040f)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/xXokhQi-zAE/hqdefault.jpg" alt="Maggie Adv thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'xXokhQi-zAE')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">08</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Maggie Adv</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 5 -->
+            <div class="col-lg-3 col-md-4 col-6 fade-in-up" style="animation-delay:.3s">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#012a4a,#013a63,#01497c)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/uMMPtdBQel8/hqdefault.jpg" alt="Motion Graphics thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'uMMPtdBQel8')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">09</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Motion Graphics</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOCUMENTARY -->
+        <div class="tab-pane fade" id="documentary" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/C85H7txXaI0/maxresdefault.jpg" alt="Myntra Motion Adv thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/C85H7txXaI0/hqdefault.jpg';" />
+                  <div class="pcard-category">Documentary</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'C85H7txXaI0')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">01</div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Myntra Motion Adv</h4>
+                  <p class="pcard-desc">Urban documentary exploring the raw pulse of midnight streets.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-camera2"></i> Premiere Pro</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMMERCIAL -->
+        <div class="tab-pane fade" id="commercial" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/Cyjruwy4lmQ/maxresdefault.jpg" alt="Blinkit Adv thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/Cyjruwy4lmQ/hqdefault.jpg';" />
+                  <div class="pcard-category">Commercial</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'Cyjruwy4lmQ')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">01</div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Blinkit Adv</h4>
+                  <p class="pcard-desc">Luxury fashion commercial with cinematic slow-motion sequences.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-palette2"></i> DaVinci</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YOUTUBE -->
+        <div class="tab-pane fade" id="youtube" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#03071e,#370617,#6a040f)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/1rHWdZqCSwU/maxresdefault.jpg" alt="Real Estate Promo thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/1rHWdZqCSwU/hqdefault.jpg';" />
+                  <div class="pcard-category">YouTube</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'1rHWdZqCSwU')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">01</div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Real Estate Promo</h4>
+                  <p class="pcard-desc">Viral travel vlog series with immersive editing and transitions.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> YouTube</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MUSIC VIDEO -->
+        <div class="tab-pane fade" id="musicvideo" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb" style="background:linear-gradient(135deg,#240046,#7b2d8b,#c77dff)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/9qFNoDtDlac/maxresdefault.jpg" alt="Starbucks Adv thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/9qFNoDtDlac/hqdefault.jpg';" />
+                  <div class="pcard-category">Music Video</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'9qFNoDtDlac')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">01</div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Starbucks Adv</h4>
+                  <p class="pcard-desc">High-energy music video with glitch effects and light leaks.</p>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-music-note"></i> After Effects</span>
+                    <a href="#" class="pcard-cta">View <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHORTS (folded in from the vertical reels section) -->
+        <div class="tab-pane fade" id="shorts" role="tabpanel">
+          <div class="row g-4">
+            <!-- Short 1 -->
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/q7KE-Gh3aFM/hqdefault.jpg" alt="Teleport Vfx thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'q7KE-Gh3aFM')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">01</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Teleport Vfx</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 2 -->
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/IAIFpcRW7ss/hqdefault.jpg" alt="Holographic Watch Concept thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'IAIFpcRW7ss')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">02</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Holographic Watch Concept</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 3 -->
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#240046,#7b2d8b,#c77dff)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/CWpHY_cZOnw/hqdefault.jpg" alt="Zomato Adv thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'CWpHY_cZOnw')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">03</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Zomato Adv</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 4 -->
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#03071e,#370617,#6a040f)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/xXokhQi-zAE/hqdefault.jpg" alt="Maggie Adv thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'xXokhQi-zAE')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">04</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Maggie Adv</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Short 5 -->
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="portfolio-card">
+                <div class="pcard-thumb pcard-thumb--vertical" style="background:linear-gradient(135deg,#012a4a,#013a63,#01497c)">
+                  <img class="pcard-thumb-img" src="https://img.youtube.com/vi/uMMPtdBQel8/hqdefault.jpg" alt="Motion Graphics thumbnail" loading="lazy" />
+                  <div class="pcard-category">Shorts</div>
+                  <div class="pcard-overlay">
+                    <a href="#" class="pcard-play" onclick="return loadCardVideo(this,'uMMPtdBQel8')"><i class="bi bi-play-fill"></i></a>
+                  </div>
+                  <div class="pcard-scene-number">05</div>
+                  <div class="thumb-lights"></div>
+                </div>
+                <div class="pcard-body">
+                  <h4 class="pcard-title">Motion Graphics</h4>
+                  <div class="pcard-footer">
+                    <span class="pcard-tech"><i class="bi bi-youtube"></i> Shorts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tab-content -->
+    </div>
+    <script>
+      function loadCardVideo(el, videoId) {
+        var thumb = el.closest('.pcard-thumb');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?rel=0&autoplay=1';
+        iframe.title = 'YouTube video player';
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allowFullscreen = true;
+        iframe.style.position = 'absolute';
+        iframe.style.inset = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = '0';
+        iframe.style.zIndex = '5';
+        thumb.appendChild(iframe);
+        return false;
+      }
+    </script>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section-gap" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">PRAISE</p>
+        <h2 class="section-title">What Clients Say</h2>
+        <div class="section-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-4 col-md-6 fade-in-up">
+          <div class="testimonial-card">
+            <div class="tcard-glow"></div>
+            <i class="bi bi-quote tcard-quote"></i>
+            <p class="tcard-text">
+              Shwetansh turned our raw footage into a masterpiece. The color grading alone elevated our brand film to a whole new level. Absolutely cinematic work!
+            </p>
+            <div class="tcard-author">
+              <div class="tcard-avatar">
+                <i class="bi bi-person-fill"></i>
+              </div>
+              <div class="tcard-info">
+                <span class="tcard-name">Rahul Verma</span>
+                <span class="tcard-role">Brand Director, Luminos Co.</span>
+              </div>
+              <div class="tcard-stars ms-auto">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay:.15s">
+          <div class="testimonial-card testimonial-card--featured">
+            <div class="tcard-glow"></div>
+            <i class="bi bi-quote tcard-quote"></i>
+            <p class="tcard-text">
+              Working with Shwetansh was a dream. He understood our vision instantly and delivered a YouTube series that gained over 100K views in a week. Truly talented!
+            </p>
+            <div class="tcard-author">
+              <div class="tcard-avatar">
+                <i class="bi bi-person-fill"></i>
+              </div>
+              <div class="tcard-info">
+                <span class="tcard-name">Priya Sharma</span>
+                <span class="tcard-role">YouTube Creator</span>
+              </div>
+              <div class="tcard-stars ms-auto">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay:.3s">
+          <div class="testimonial-card">
+            <div class="tcard-glow"></div>
+            <i class="bi bi-quote tcard-quote"></i>
+            <p class="tcard-text">
+              The music video he edited for us exceeded all expectations. Every cut was perfectly synced, and the visual storytelling was next level. Highly recommended!
+            </p>
+            <div class="tcard-author">
+              <div class="tcard-avatar">
+                <i class="bi bi-person-fill"></i>
+              </div>
+              <div class="tcard-info">
+                <span class="tcard-name">Aryan Kapoor</span>
+                <span class="tcard-role">Independent Music Artist</span>
+              </div>
+              <div class="tcard-stars ms-auto">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT CTA ========== -->
+  <section class="section-gap" id="contact">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner__glow"></div>
+        <div class="row align-items-center g-4">
+          <div class="col-md-8">
+            <div class="d-flex align-items-center gap-4">
+              <div class="cta-icon-wrap">
+                <div class="cta-icon-ring"></div>
+                <i class="bi bi-camera-reels-fill cta-icon"></i>
+              </div>
+              <div>
+                <h2 class="cta-heading">Have a project in mind?</h2>
+                <p class="cta-sub mb-0">Let's create something amazing together.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="mailto:shwetansh099@gmail.com" class="btn btn-neon-solid btn-lg cta-btn">
+              <i class="bi bi-envelope-arrow-up-fill me-2"></i>Contact Me
+            </a>
+            <a href="tel:+917754835448" class="btn btn-glass-outline btn-lg cta-btn mt-2 mt-md-0 ms-md-2">
+              <i class="bi bi-telephone-fill me-2"></i>7754835448
+            </a>
+          </div>
+        </div>
+        <div class="cta-deco cta-deco--1"></div>
+        <div class="cta-deco cta-deco--2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-4">
+          <span class="footer-logo">SHWETANSH</span>
+          <p class="footer-tag">Crafting Cinematic Stories Through Editing</p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p class="footer-copy mb-0">&copy; 2024 Shwetansh Sahu. All rights reserved.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <div class="footer-socials d-flex gap-3 justify-content-md-end">
+            <a href="https://www.instagram.com/shwetansh_09?igsh=MXg0OXJtYWMyemtsbw==" target="_blank" class="footer-social-link" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC_OkNKa2-ZoWXxMD6gGaq4A" target="_blank" class="footer-social-link" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="mailto:shwetansh099@gmail.com" class="footer-social-link" aria-label="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="tel:+917754835448" class="footer-social-link" aria-label="Phone">
+              <i class="bi bi-telephone-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-credits text-center mb-0">Made with <span class="text-purple">♥</span> by Shwetansh Sahu &mdash; AAFT Noida</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar blur on scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 60);
+    });
+
+    // Active nav link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link-custom');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) cur = s.id;
+      });
+      navLinks.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + cur) l.classList.add('active');
+      });
+    });
+
+    // Intersection Observer for fade-in
+    const fadeEls = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.12 });
+    fadeEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
