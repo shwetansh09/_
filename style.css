@@ -34,6 +34,19 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--purple) var(--bg-secondary);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Instant, reliable tap response on phones/tablets (no 300ms delay,
+   no stuck highlight flash, and a comfortable minimum tap target) */
+a, button, .btn, input[type="button"], input[type="submit"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -264,6 +277,62 @@ body {
   padding: 1.2rem 0;
 }
 
+/* Touch-friendly toggler */
+.navbar-toggler {
+  border: none;
+  padding: 8px 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Mobile dropdown menu needs its own solid, tappable surface */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(5, 8, 22, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    margin-top: 1rem;
+    padding: 1.25rem 1rem;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    gap: 0.25rem;
+  }
+
+  .nav-link-custom {
+    display: block;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.95rem;
+  }
+
+  .nav-link-custom::after {
+    display: none;
+  }
+
+  .nav-link-custom.active {
+    background: rgba(139, 92, 246, 0.12);
+    border-radius: 8px;
+  }
+
+  .navbar-collapse .btn-neon-outline {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1.4rem;
+  }
+}
+
 .nav-scrolled {
   background: rgba(5, 8, 22, 0.88) !important;
   backdrop-filter: blur(20px) !important;
@@ -441,8 +510,8 @@ body {
 }
 
 .social-icon-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border-glass);
   display: flex;
@@ -453,6 +522,7 @@ body {
   transition: var(--transition);
   text-decoration: none;
   background: rgba(139,92,246,0.06);
+  cursor: pointer;
 }
 
 .social-icon-btn:hover {
@@ -1281,6 +1351,21 @@ body {
   transform: scale(1);
 }
 
+/* On touch devices there is no real hover, so hover-only reveals
+   force a wasted first tap. Show the play controls immediately. */
+@media (hover: none), (pointer: coarse) {
+  .pcard-overlay {
+    background: rgba(5, 8, 22, 0.4);
+  }
+  .pcard-play {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .portfolio-card:hover .pcard-thumb-img {
+    transform: none;
+  }
+}
+
 .pcard-body {
   padding: 1.2rem 1.4rem 1.4rem;
 }
@@ -1624,7 +1709,7 @@ body {
   .float-tag { display: none; }
   .cinema-card { max-width: 100%; }
   .work-nav-tabs { gap: 4px; }
-  .work-tab-btn { padding: 7px 14px; font-size: 0.72rem; }
+  .work-tab-btn { padding: 11px 14px; font-size: 0.72rem; min-height: 44px; }
   .cta-banner { padding: 2rem 1.5rem; }
   .cta-banner .text-md-end { text-align: left !important; margin-top: 1rem; }
   .section-gap { padding: 60px 0; }
