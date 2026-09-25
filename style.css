@@ -1504,9 +1504,29 @@ body {
   color: var(--white);
 }
 
+.tcard-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tcard-name a:hover {
+  color: var(--purple);
+  text-decoration: underline;
+}
+
 .tcard-role {
   font-size: 0.72rem;
   color: var(--gray-dim);
+}
+
+.tcard-role a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.tcard-role a:hover {
+  color: var(--blue);
+  text-decoration: underline;
 }
 
 .tcard-stars {
